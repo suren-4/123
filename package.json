@@ -1,0 +1,71 @@
+{
+  "name": "my-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://127.0.0.1:5000",
+  "dependencies": {
+    "@cloudinary/react": "^1.14.1",
+    "@cloudinary/url-gen": "^1.21.0",
+    "@supabase/supabase-js": "^2.x.x",
+    "@techstark/opencv-js": "^4.10.0-release.1",
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+    "@tensorflow/tfjs-converter": "^4.22.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/leaflet": "1.9.8",
+    "axios": "^1.8.3",
+    "leaflet": "1.9.4",
+    "nprogress": "^0.2.0",
+    "papaparse": "^5.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "4.2.1",
+    "react-router-dom": "^6.22.1",
+    "react-scripts": "5.0.1",
+    "tesseract.js": "^6.0.0",
+    "tesseract.js-core": "^6.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.x.x",
+    "eslint-plugin-react": "^7.x.x"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "overrides": {
+    "svgo": {
+      "nth-check": "2.1.1"
+    },
+    "resolve-url-loader": {
+      "postcss": "8.5.3"
+    },
+    "rollup-plugin-terser": {
+      "serialize-javascript": "6.0.2",
+      "node_modules": {
+        "serialize-javascript": {
+          "rollup-plugin-terser": "7.0.2"
+        }
+      }
+    }
+  }
+}

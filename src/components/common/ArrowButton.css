@@ -1,0 +1,103 @@
+.arrow-button-wrapper {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.arrow-button-wrapper:hover {
+  transform: translateX(-5px);
+}
+
+.arrow-button-wrapper:active {
+  transform: translateX(-5px) scale(0.95);
+}
+
+.arrow {
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  transition: transform 0.1s;
+  width: 20px;
+  transform: translateX(-2px);
+}
+
+.arrow-top, .arrow-bottom {
+  background-color: #8B6B4E;
+  height: 2px;
+  left: -4px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.arrow-top:after, .arrow-bottom:after {
+  background-color: transparent;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+
+.arrow-top {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.arrow-top:after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0s;
+}
+
+.arrow-bottom {
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.arrow-bottom:after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0.15s;
+}
+
+.arrow-button-wrapper:hover .arrow-top:after {
+  right: 0;
+  transition-delay: 0.15s;
+}
+
+.arrow-button-wrapper:hover .arrow-bottom:after {
+  left: 0;
+  transition-delay: 0s;
+}
+
+@media (max-width: 1024px) {
+  .arrow-button-wrapper {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow-button-wrapper {
+    top: 1rem;
+    left: 1rem;
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow {
+    height: 16px;
+    width: 16px;
+  }
+} 

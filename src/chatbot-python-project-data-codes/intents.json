@@ -1,0 +1,425 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Hello", "Vanakkam", "Hey there", "Good morning"],
+         "responses": [
+           "Vanakkam! Welcome to Kalanjiyam. How can I help you explore our ancient heritage?",
+           "Hello! I'm your archaeological assistant. What would you like to know about our artifacts?",
+           "Greetings! I can help you discover our historical collections and membership benefits."
+         ],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time", 
+                     "I have to go", "Talk to you later", "I'm leaving", "Have a good day", "Catch you later"],
+         "responses": ["See you soon!", "Have a nice day", "Bye! Come back again soon.", "Talk to you later!"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me", 
+                     "I appreciate it", "That's useful", "Great help", "You're the best", "Much appreciated"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure", "You're welcome!", "Glad I could assist!"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand", 
+                      "I'm not sure I understand. Could you rephrase that?", 
+                      "I don't have information about that yet. Is there something else I can help with?", 
+                      "I'm still learning. Could you try asking in a different way?"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": [
+           "how could you help me",
+           "how can you help me",
+           "what can you do",
+           "what help do you provide",
+           "how do you help",
+           "what are your capabilities",
+           "what services do you offer",
+           "tell me what you can do",
+           "explain your features",
+           "show me your options"
+         ],
+         "responses": [
+           "I can help you explore our artifact collection, learn about Tamil heritage, and access membership benefits. What would you like to know about?",
+           "I'm here to assist with: 1) Exploring artifacts 2) Learning about Tamil history 3) Membership information 4) Museum visits. What interests you?"
+         ],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", 
+                     "List all drugs suitable for patient with adverse reaction", "Which drugs don't have adverse reaction?",
+                     "Show me adverse drug reactions", "What medications cause side effects?", 
+                     "Tell me about medication reactions", "Drug side effects information"],
+         "responses": ["Navigating to Adverse drug reaction module"],
+         "context": [""]
+        },
+        {"tag": "personal_questions",
+         "patterns": ["Who are you?", "What's your name?", "Tell me about yourself", "What can you do?", 
+                     "Are you a bot?", "Are you human?", "Who created you?", "How old are you?", 
+                     "Where are you from?", "How do you work?"],
+         "responses": ["I'm a friendly AI chatbot here to help you with medical information", 
+                      "I'm your virtual health assistant, designed to answer your questions about medications and health services",
+                      "I'm a digital assistant focused on helping you with health-related queries"],
+         "context": [""]
+        },
+        {"tag": "jokes",
+         "patterns": ["Tell me a joke", "Say something funny", "Make me laugh", "I need a laugh", 
+                     "Do you know any jokes?", "Tell me something humorous", "Lighten the mood"],
+         "responses": ["Why don't scientists trust atoms? Because they make up everything!", 
+                      "What did the doctor say to the patient who thought they were invisible? I can see right through you!",
+                      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                      "What do you call a fake noodle? An impasta!",
+                      "Why don't skeletons fight each other? They don't have the guts!"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Check blood pressure", "Blood pressure tracking", "Monitor my blood pressure", 
+                     "How to record blood pressure", "Help with blood pressure", "Blood pressure information",
+                     "How to monitor hypertension", "Track my BP readings", "Systolic and diastolic values"],
+         "responses": ["Navigating to Blood Pressure module", 
+                      "I can help you track your blood pressure readings", 
+                      "Let me show you how to monitor your blood pressure"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["Search for blood pressure", "Find blood pressure info", "Where can I find blood pressure info",
+                     "Blood pressure data", "Show me my blood pressure history", "BP statistics"],
+         "responses": ["Searching for Blood Pressure information"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Find hospital", "Locate healthcare", "List hospitals", "Find me a hospital", 
+                     "Show nearby hospitals", "Best hospitals", "Hospital recommendations",
+                     "Where can I get medical help?", "Emergency room locations", "Medical centers near me"],
+         "responses": ["Searching for hospitals in your area", 
+                      "Here are some hospitals I can recommend", 
+                      "Let me find the closest medical facilities for you"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find pharmacy", "Locate pharmacy", "List of pharmacies", "Drugstores", "Chemists near me",
+                     "Where can I buy medicine?", "Pharmacy locations", "24-hour pharmacy",
+                     "Prescription refill locations", "Where to get medications"],
+         "responses": ["Searching for pharmacies in your area", 
+                      "Let me find pharmacies close to you", 
+                      "Here are some pharmacies I can recommend"],
+         "context": [""]
+        },
+        {"tag": "follow_up",
+         "patterns": ["Tell me more", "Continue", "And then?", "More information please", 
+                     "What else?", "Go on", "I'd like to know more", "Please elaborate", 
+                     "Can you explain further?", "Additional details"],
+         "responses": ["What specific information would you like to know?", 
+                      "I'd be happy to elaborate. What aspect interests you most?",
+                      "Could you specify what details you need?",
+                      "I can provide more information if you tell me what you're looking for specifically"],
+         "context": [""]
+        },
+        {"tag": "artifacts",
+         "patterns": [
+           "Show me artifacts", 
+           "What artifacts do you have",
+           "Tell me about Chola period",
+           "Tamil Nadu artifacts",
+           "Historical items"
+         ],
+         "responses": [
+           "We have a vast collection of artifacts from various periods. Our notable collections include Chola bronzes, temple inscriptions, and ancient Tamil manuscripts.",
+           "Our artifacts include pieces from the Chola, Pallava, and Pandya dynasties. Would you like to explore a specific period?"
+         ]
+        },
+        {"tag": "membership",
+         "patterns": [
+           "Membership plans",
+           "How much is membership",
+           "Basic Explorer plan",
+           "Kalanjiyam Patron benefits",
+           "Join membership"
+         ],
+         "responses": [
+           "We offer two membership tiers: Basic Explorer (₹999/year) and Kalanjiyam Patron (₹2,499/year). Both include instant artifact feed access.",
+           "Our Kalanjiyam Patron membership (₹2,499/year) includes exclusive documentaries, artifact lectures, and behind-the-scenes updates."
+         ]
+        },
+        {"tag": "museums",
+         "patterns": [
+           "Visit museums",
+           "Museum locations",
+           "Where can I see artifacts",
+           "Museum timings",
+           "Book museum tickets"
+         ],
+         "responses": [
+           "You can visit our partner museums in Chennai and Delhi. The National Museum and Madras Museum showcase our finest collections.",
+           "Our museum partners offer guided tours and special exhibitions. Would you like information about booking tickets?"
+         ]
+        },
+        {"tag": "excavation",
+         "patterns": [
+           "Latest excavations",
+           "Recent discoveries",
+           "Archaeological sites",
+           "New findings",
+           "Dig updates"
+         ],
+         "responses": [
+           "Our latest excavations have revealed fascinating artifacts from ancient Tamil civilizations. Members get real-time updates on new discoveries.",
+           "Recent excavations have uncovered important historical sites. Would you like to learn more about our findings?"
+         ]
+        },
+        {"tag": "artifact_details",
+         "patterns": [
+           "What is this artifact",
+           "Tell me about artifacts",
+           "How old is this artifact",
+           "Artifact information",
+           "Artifact details",
+           "What period is this from",
+           "Show artifact history",
+           "Describe this piece",
+           "What dynasty is this from"
+         ],
+         "responses": [
+           "Each artifact in our collection includes details about its period, dynasty, material, and historical significance. You can click on any artifact to see its full details.",
+           "Our artifacts are categorized by period, dynasty, and location. Would you like to explore artifacts from a specific era?",
+           "You can find detailed information about each artifact including its age, origin, and historical context in our digital gallery."
+         ]
+        },
+        {"tag": "artifact_location",
+         "patterns": [
+           "Where can I see this artifact",
+           "Which museum has this",
+           "Museum location for artifacts",
+           "How to visit artifacts",
+           "Where are artifacts displayed",
+           "Physical location of artifacts",
+           "Visit artifact in person"
+         ],
+         "responses": [
+           "Our artifacts are displayed in partner museums across India, primarily in Chennai and Delhi. You can find the exact location on each artifact's detail page.",
+           "The National Museum in Delhi and Madras Museum in Chennai house many of our documented artifacts. Would you like museum visiting information?",
+           "Each artifact's location is listed in its details. We can help you plan a visit to see them in person."
+         ]
+        },
+        {"tag": "artifact_search",
+         "patterns": [
+           "How to find artifacts",
+           "Search for artifacts",
+           "Filter artifacts",
+           "Find specific artifact",
+           "Browse collection",
+           "Explore artifacts",
+           "Look for specific period"
+         ],
+         "responses": [
+           "You can use our Explore page to search artifacts by period, dynasty, location, or material. Would you like me to show you how?",
+           "Our digital gallery allows filtering by various categories including historical period, dynasty, and location.",
+           "Try using the search bar on our Explore page, or use filters to narrow down artifacts by period, material, or location."
+         ]
+        },
+        {"tag": "membership_benefits",
+         "patterns": [
+           "What do members get",
+           "Membership advantages",
+           "Why become a member",
+           "Member exclusive features",
+           "Special access for members",
+           "Member benefits",
+           "Premium features"
+         ],
+         "responses": [
+           "Members get exclusive access to: 1) Real-time excavation updates 2) Detailed artifact documentation 3) Expert lectures 4) Special museum tours. Basic Explorer starts at ₹999/year.",
+           "Our Kalanjiyam Patron members (₹2,499/year) enjoy premium benefits including behind-the-scenes content, expert consultations, and early access to new discoveries.",
+           "Membership includes instant artifact feed access, exclusive documentaries, and special museum visit privileges. Would you like to know more about our membership tiers?"
+         ]
+        },
+        {"tag": "upload_artifact",
+         "patterns": [
+           "How to upload artifact",
+           "Submit new artifact",
+           "Add artifact information",
+           "Contribute artifact",
+           "Share artifact details",
+           "Document new artifact",
+           "Upload process"
+         ],
+         "responses": [
+           "To upload a new artifact, use our Upload page. You'll need to provide details like period, dynasty, material, and clear images.",
+           "Artifact uploads require authentication. Please ensure you have proper documentation and clear images before submitting.",
+           "Visit our Upload section to contribute artifact information. We'll guide you through the documentation process."
+         ]
+        },
+        {"tag": "tamil_heritage",
+         "patterns": [
+           "Tamil artifacts",
+           "Tamil Nadu heritage",
+           "Ancient Tamil history",
+           "Tamil dynasty artifacts",
+           "South Indian artifacts",
+           "Tamil culture artifacts",
+           "Dravidian artifacts"
+         ],
+         "responses": [
+           "Our Tamil heritage collection includes artifacts from the Chola, Pallava, and Pandya dynasties, showcasing rich cultural history spanning over 2000 years.",
+           "We have extensive documentation of Tamil Nadu's archaeological heritage, including temple architecture, bronze sculptures, and ancient inscriptions.",
+           "Explore our collection of South Indian artifacts, featuring pieces from various Tamil dynasties and historical periods."
+         ]
+        },
+        {"tag": "museum_partnership",
+         "patterns": [
+           "Partner museums",
+           "Museum collaboration",
+           "Associated museums",
+           "Museum network",
+           "Visit partner museums",
+           "Museum locations",
+           "Museum timings"
+         ],
+         "responses": [
+           "We partner with major museums including the National Museum (Delhi) and Government Museum (Chennai). Each offers unique exhibits of our documented artifacts.",
+           "Our museum partners provide special access and guided tours for Kalanjiyam members. Would you like information about visiting hours and tickets?",
+           "Partner museums showcase our documented artifacts with expert curators available for detailed historical context."
+         ]
+        },
+        {"tag": "artifact_period",
+         "patterns": [
+           "Which period is this from",
+           "When was this made",
+           "Dating of artifact",
+           "Age of the piece",
+           "Time period"
+         ],
+         "responses": [
+           "Our artifacts span various periods from ancient Tamil history. Each piece includes detailed dating information on its detail page.",
+           "We use scientific methods to date our artifacts. You can find the specific period information in the artifact details."
+         ]
+        },
+        {"tag": "artifact_categories",
+         "patterns": [
+           "What types of artifacts do you have",
+           "Categories of artifacts",
+           "Different kinds of artifacts",
+           "What can I explore",
+           "Show me artifact categories"
+         ],
+         "responses": [
+           "We have several categories including: 1) Temple Architecture 2) Bronze Sculptures 3) Stone Inscriptions 4) Ancient Coins 5) Pottery 6) Jewelry 7) Manuscripts. Which interests you?",
+           "Our collection spans various categories: Temple artifacts, Bronze sculptures, Stone inscriptions, Ancient coins, Pottery, Jewelry, and Palm leaf manuscripts. Would you like to explore any specific category?"
+         ]
+        },
+        {"tag": "temple_artifacts",
+         "patterns": [
+           "Show temple artifacts",
+           "Temple architecture details",
+           "Ancient temple pieces",
+           "Temple sculptures",
+           "Religious artifacts",
+           "Temple history artifacts"
+         ],
+         "responses": [
+           "Our temple artifacts collection includes architectural elements, sculptures, and ritual objects from various dynasties. Notable pieces include Chola bronze deities and Pallava stone carvings.",
+           "We have documented temple artifacts spanning the Pallava, Chola, and Pandya periods. These include architectural fragments, bronze icons, and stone sculptures. Would you like to see specific examples?"
+         ]
+        },
+        {"tag": "bronze_artifacts",
+         "patterns": [
+           "Bronze sculptures",
+           "Chola bronzes",
+           "Metal artifacts",
+           "Bronze statues",
+           "Ancient bronze pieces",
+           "Bronze art"
+         ],
+         "responses": [
+           "Our bronze collection features exquisite pieces from the Chola period, known for their artistic excellence. The collection includes dancing figures, deity statues, and decorative objects.",
+           "The bronze artifacts showcase the masterful craftsmanship of ancient Tamil artisans. Many pieces feature the lost-wax casting technique unique to the Chola period."
+         ]
+        },
+        {"tag": "stone_inscriptions",
+         "patterns": [
+           "Ancient inscriptions",
+           "Stone writings",
+           "Historical texts",
+           "Rock edicts",
+           "Tamil inscriptions",
+           "Epigraphical evidence"
+         ],
+         "responses": [
+           "Our stone inscriptions provide valuable historical information about ancient Tamil society, governance, and culture. Many are written in Tamil-Brahmi and later Tamil scripts.",
+           "The inscription collection includes royal edicts, temple records, and land grants. These help us understand the social, economic, and political systems of ancient Tamil Nadu."
+         ]
+        },
+        {"tag": "excavation_sites",
+         "patterns": [
+           "Current excavation sites",
+           "Where are you digging",
+           "Active archaeological sites",
+           "Ongoing excavations",
+           "Archaeological digs",
+           "Current dig locations"
+         ],
+         "responses": [
+           "Our current excavations are focused on several key sites in Tamil Nadu, including ancient port cities and inland trading centers. Each site reveals new aspects of Tamil heritage.",
+           "We're currently excavating at multiple locations that show evidence of ancient Tamil civilization. These sites have yielded pottery, coins, and structural remains."
+         ]
+        },
+        {"tag": "artifact_dating",
+         "patterns": [
+           "How old are the artifacts",
+           "Dating methods used",
+           "Age determination",
+           "Carbon dating",
+           "Artifact timeline",
+           "Historical dating"
+         ],
+         "responses": [
+           "We use various scientific methods including radiocarbon dating, thermoluminescence, and stratigraphic analysis to date artifacts. Most of our collection ranges from 3rd century BCE to 13th century CE.",
+           "Our artifacts are dated using multiple techniques. The oldest pieces in our collection date back to the Sangam period (3rd century BCE to 3rd century CE)."
+         ]
+        },
+        {"tag": "digital_features",
+         "patterns": [
+           "Digital gallery features",
+           "Online collection access",
+           "Virtual tour options",
+           "Digital documentation",
+           "Online exhibits",
+           "Virtual features"
+         ],
+         "responses": [
+           "Our digital platform offers: 1) High-resolution 3D scans 2) Virtual tours 3) Detailed artifact documentation 4) Interactive timelines 5) Educational resources. What would you like to explore?",
+           "You can explore our collection through virtual tours, 3D models, and detailed digital documentation. Members get access to additional features like expert lectures and behind-the-scenes content."
+         ]
+        },
+        {"tag": "research_collaboration",
+         "patterns": [
+           "Research opportunities",
+           "Academic collaboration",
+           "Study artifacts",
+           "Research access",
+           "Scholar programs",
+           "Academic partnership"
+         ],
+         "responses": [
+           "We welcome research collaborations! Scholars can access our detailed documentation, work with our experts, and contribute to ongoing research projects.",
+           "Our research program offers opportunities for scholars to study artifacts, participate in excavations, and contribute to our documentation efforts. Would you like more information?"
+         ]
+        },
+        {"tag": "conservation",
+         "patterns": [
+           "Artifact preservation",
+           "Conservation methods",
+           "How do you protect artifacts",
+           "Preservation techniques",
+           "Artifact care",
+           "Conservation efforts"
+         ],
+         "responses": [
+           "We employ state-of-the-art conservation techniques to preserve our artifacts. This includes climate control, specialized storage, and regular maintenance by expert conservators.",
+           "Our conservation team uses both traditional and modern methods to protect artifacts. Each piece is carefully documented and monitored to ensure its long-term preservation."
+         ]
+        }
+   ]
+}

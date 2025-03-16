@@ -1,0 +1,460 @@
+:root {
+    --primary-color: #8B6B4E;
+    --secondary-color: #E5D6C6;
+    --background-color: #F5EFE8;
+    --text-color: #4A3728;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.top-header {
+    background: var(--white);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(139, 107, 78, 0.1);
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    color: #8B6B4E;
+}
+
+.left-section h1 {
+    color: #4A3728;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.right-section span {
+    color: #4A3728;
+    font-size: 15px;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #8B6B4E;
+    border-radius: 6px;
+    background: transparent;
+    color: #8B6B4E;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #8B6B4E;
+    color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 40px;
+    margin-top: 80px;
+    flex: 1;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - 80px);
+    overflow-y: visible;
+    padding-bottom: 100px;
+}
+
+.welcome-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.welcome-card h2 {
+    color: #4A3728;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding-top: 20px;
+    position: relative;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+.welcome-card .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.feature-item {
+    background: var(--background-color);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feature-item i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Upload Button */
+.upload-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #8B6B4E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(139, 107, 78, 0.2);
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    background: #735A41;
+}
+
+.upload-btn i {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        padding: 0 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .main-content.sidebar-active {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.active {
+        width: 100%;
+    }
+
+    .welcome-card {
+        padding: 24px;
+    }
+
+    .welcome-card h2 {
+        font-size: 24px;
+    }
+
+    .upload-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Add these styles back to your Dashboard.css */
+
+.sidebar {
+    position: fixed;
+    left: -280px;
+    top: 80px;
+    width: 280px;
+    height: calc(100vh - 80px);
+    background: var(--white);
+    padding: 32px;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.org-profile {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.org-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: white;
+    font-size: 32px;
+}
+
+.org-details {
+    padding-top: 24px;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.org-details h3 {
+    color: var(--text-color);
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.detail-item i {
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 20px;
+}
+
+.detail-item span {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.main-content.sidebar-active {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+/* Add these new styles while keeping existing ones */
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--background-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.stat-info h3 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.stat-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.recent-uploads {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.view-all-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.upload-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.upload-image {
+    height: 160px;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.upload-info {
+    padding: 16px;
+}
+
+.upload-info h3 {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.upload-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .upload-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Remove these styles */
+.center-section,
+.search-bar,
+.notification-bell,
+.notification-badge {
+  display: none;
+} 

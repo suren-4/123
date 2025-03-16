@@ -1,0 +1,230 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0bf88 0%, #d4b27c 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: all 1s ease-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.loading-content {
+  text-align: center;
+  color: #2C2C2C;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+.artifact-symbol {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  color: #8B6B4E;
+  animation: symbolAnimation 4s ease-in-out infinite;
+  position: relative;
+}
+
+.artifact-symbol::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(139, 107, 78, 0.2) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.loading-title {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 6px;
+  animation: titleReveal 1.5s ease-out;
+  font-weight: 600;
+  color: #8B6B4E;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.loading-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #8B6B4E;
+  animation: lineExpand 1.5s ease-out;
+}
+
+.loading-bar {
+  width: 240px;
+  height: 4px;
+  background: rgba(139, 107, 78, 0.2);
+  border-radius: 4px;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-progress {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #8B6B4E, #a88565);
+  animation: progressAdvance 2.5s ease-in-out;
+  transform-origin: left;
+  position: relative;
+  border-radius: 4px;
+}
+
+.loading-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 1.5s infinite;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: textFadeIn 1s ease-out 1s forwards;
+  color: #2C2C2C;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* Enhanced Animations */
+@keyframes symbolAnimation {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-5deg) scale(1.05);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    letter-spacing: 15px;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 6px;
+  }
+}
+
+@keyframes lineExpand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+@keyframes progressAdvance {
+  0% {
+    transform: scaleX(0);
+  }
+  30% {
+    transform: scaleX(0.3);
+  }
+  60% {
+    transform: scaleX(0.7);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .loading-title {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+  }
+  
+  .artifact-symbol {
+    font-size: 4rem;
+  }
+  
+  .loading-bar {
+    width: 200px;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+  }
+} 

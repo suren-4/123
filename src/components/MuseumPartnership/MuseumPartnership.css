@@ -1,0 +1,388 @@
+.museum-partnership-container {
+  min-height: 100vh;
+  background-color: #f5f2ed;
+  padding: 5.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+.partnership-header {
+  background-color: #8B6B4E;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 10rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.partnership-header h1 {
+  font-size: 2.5rem;
+  padding-top: 6
+  0rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  padding-top: 45rem;
+}
+
+.partnership-header p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.museums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.museum-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.museum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.museum-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.museum-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.museum-card:hover .museum-image img {
+  transform: scale(1.05);
+}
+
+.museum-info {
+  padding: 1.5rem;
+}
+
+.museum-info h2 {
+  color: #8B6B4E;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.museum-location {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.museum-description {
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.museum-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.highlight-icon {
+  font-size: 1.2rem;
+}
+
+.book-ticket-button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #8B6B4E;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-ticket-button:hover {
+  background: #a07a59;
+}
+
+.business-model-section {
+  margin: 4rem 0;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.business-model-section h2 {
+  text-align: center;
+  color: #8B6B4E;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.business-model-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.model-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.model-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #8B6B4E;
+}
+
+.model-card h3 {
+  color: #8B6B4E;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.model-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.partnership-benefits {
+  margin: 4rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.partnership-benefits h2 {
+  text-align: center;
+  color: #8B6B4E;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: masonry;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  color: #8B6B4E;
+  margin-bottom: 0.8rem;
+}
+
+.benefit-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.become-partner {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+}
+
+.become-partner h2 {
+  color: #8B6B4E;
+  margin-bottom: 1rem;
+}
+
+.become-partner p {
+  color: #333;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partner-button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: #8B6B4E;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.partner-button:hover {
+  background: #a07a59;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .museum-partnership-container {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .partnership-header {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .partnership-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .museums-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .business-model-cards,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Museum promotion in artifact detail page */
+.museum-promotion {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.museum-promotion h3 {
+  color: #8B6B4E;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.related-museums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.related-museum-card {
+  background: #f9f7f4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.related-museum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.related-museum-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.related-museum-card .museum-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.related-museum-card h4 {
+  color: #8B6B4E;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.related-museum-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.related-museum-card button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #8B6B4E;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.related-museum-card button:hover {
+  background: #a07a59;
+}
+
+/* Make the body and html elements allow scrolling */
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Ensure the root div allows scrolling */
+#root {
+  height: 100%;
+  overflow-y: auto;
+} 

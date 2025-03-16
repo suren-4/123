@@ -1,0 +1,11 @@
+.upload-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #FAF7F5;  /* Very light cream color from the image */
+  color: #4A3728;  /* Dark brown text color for better contrast */
+  padding: 2rem 4rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+} 
