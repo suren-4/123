@@ -1,8 +1,10 @@
-# Kalanjiyam
 
-A modern web application for exploring, documenting, and sharing archaeological artifacts and historical heritage.
+# ***<h1 align="center" style="font-family: 'Roboto', sans-serif;">Kalanjiyam</h1>***
 
----
+<p align="center">
+  <i>A modern web application for exploring, documenting, and sharing archaeological artifacts and historical heritage.</i>
+</p>
+
 
 ## 📌 Project Overview
 Kalanjiyam is a platform that connects archaeologists, historians, and enthusiasts to explore and document archaeological artifacts. The application provides a user-friendly interface for browsing artifacts, viewing detailed information, and contributing to the archaeological knowledge base.
