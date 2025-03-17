@@ -158,3 +158,11 @@ The build files will be available in the `build/` directory, ready for deploymen
 ✅ Consider adding role-based access control for contributors and administrators.  
 
 ---
+## 👥 Collaborators
+
+- [Suren Kumar](https://github.com/suren-4) - [surenkumar0404@gmail.com](mailto:surenkumar0404@gmail.com)  
+- [Ravindra S](https://github.com/ravindra11-jpg) - [ravindrasaravanan@gmail.com](mailto:ravindrasaravanan@gmail.com)  
+- [Sana](https://github.com/brillar25) - [sana.aug05@gmail.com](mailto:sana.aug05@gmail.com)  
+- [Smirithi P](https://github.com/smirithii) - [smirithip@gmail.com](mailto:smirithip@gmail.com)
+
+
